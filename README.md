@@ -10,8 +10,10 @@ In this exercise, we will use all what we have learned about APIs and how to con
 
 ## Requirements
 
-- Fork this repo
-- Then clone this repo
+- Clone this repo
+- Run `npm i`
+- Run `npm run dev` or `nodemon` to start the project
+  - *Note*: The `env` file is available for you in the repo.
 
 ## Submission
 
