@@ -13,7 +13,7 @@ In this exercise, we will use all what we have learned about APIs and how to con
 - Clone this repo
 - Run `npm i`
 - Run `npm run dev` or `nodemon` to start the project
-  - *Note*: The `env` file is available for you in the repo.
+  - _Note_: The `env` file is available for you in the repo.
 
 ## Submission
 
@@ -50,7 +50,7 @@ Here are the relevant API endpoints (routes) that the Characters API provides to
 All these routes must be prefixed with the API's base URL: **`https://ih-crud-api.herokuapp.com`**.
 :::
 
-The way how the endpoints are presented in the table above is the usual approach you will find in the majority API documentations. The base URL will be given once, and it is considered that it will be prefixed to each endpoint by default. For example, the full URL of the `/characters` endpoint would be `https://ih-crud-api.herokuapp.com/characters`. 
+The way how the endpoints are presented in the table above is the usual approach you will find in the majority API documentations. The base URL will be given once, and it is considered that it will be prefixed to each endpoint by default. For example, the full URL of the `/characters` endpoint would be `https://ih-crud-api.herokuapp.com/characters`.
 
 <br>
 
@@ -62,23 +62,23 @@ The way how the endpoints are presented in the table above is the usual approach
 
 - Create `characters.routes.js` file inside the `routes` folder
   - Don't forget to link these newly created routes to the `app.js`
-- Create the `characters-views` subfolder inside the `views` folder and then create the following HBS files:
-  - `list-characters.hbs`
-  - `details-character.hbs`
-  - `create-character.hbs`
-  - `edit-character.hbs`
+- Create the `characters-views` subfolder inside the `views` folder and then create the following EJS files:
+  - `list-characters.ejs`
+  - `details-character.ejs`
+  - `create-character.ejs`
+  - `edit-character.ejs`
 
 ### List all characters
 
-- Create a **GET** route `/characters-list` in the `characters.routes.js` file. 
+- Create a **GET** route `/characters-list` in the `characters.routes.js` file.
 - Inside, use AXIOS to get the list of all characters using the `https://ih-crud-api.herokuapp.com/characters` endpoint.
-- Render the response to the `list-characters.hbs`.
+- Render the response to the `list-characters.ejs`.
 
 ### Character Details Page
 
-- Create a **GET** route `/characters/:id` in the `characters.routes.js` file. 
+- Create a **GET** route `/characters/:id` in the `characters.routes.js` file.
 - Inside, use AXIOS to get the list of all characters using the `https://ih-crud-api.herokuapp.com/characters/:id` endpoint.
-- Render the response to the `details-character.hbs`.
+- Render the response to the `details-character.ejs`.
 
 ### Create a new character
 
@@ -88,7 +88,7 @@ The way how the endpoints are presented in the table above is the usual approach
 
 ### Update a character
 
-- Create GET route `/characters/:id/edit` in the `characters.routes.js` file and render the `edit-character.hbs` page on it.
+- Create GET route `/characters/:id/edit` in the `characters.routes.js` file and render the `edit-character.ejs` page on it.
   - Make sure the form is pre-loaded with the details of a specific character you want to update. The form should have the method POST and action set to `/characters/:id/update` route.
 - After that, create a **POST** route `/characters/:id/update` in the `characters.routes.js` file.
 - Inside, use AXIOS to PUT/PATCH an updated character's object using the `https://ih-crud-api.herokuapp.com/characters/:id` endpoint.
@@ -96,7 +96,7 @@ The way how the endpoints are presented in the table above is the usual approach
 
 ### Delete a character
 
-- Create a form in the `details-character.hbs` file and set it to use POST method and action set to the route `/characters/:id/delete`.
+- Create a form in the `details-character.ejs` file and set it to use POST method and action set to the route `/characters/:id/delete`.
 - After that, create a **POST** route `/characters/:id/delete` in the `characters.routes.js` file.
 - Inside, use AXIOS to DELETE a character object using the `https://ih-crud-api.herokuapp.com/characters/:id` endpoint.
 - Redirect to `/characters` to see the full list of characters and to notice that the deleted character is not on the list.
