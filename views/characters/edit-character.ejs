@@ -1,5 +1,5 @@
 <h1>Edit character</h1>
-<form method="POST" action="/characters/:id/update<%=character.id%>">
+<form method="POST" action="/characters/<%=character.id%>/update">
     <label>Name:<input required type="text" name="name" value="<%= character.name%>" /></label>
     <label>Occupation:<input required type="text" name="occupation" value="<%= character.occupation%>" /></label>
     <label>Weapon: <input required type="text" name="weapon" value="<%= character.weapon%>" /></label>
